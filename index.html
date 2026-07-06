@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="BSA UofL alumni and current student directory with profile photos, email, LinkedIn, and bios."
+    />
+    <title>BSA UofL | Alumni & Student Profiles</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="#top" aria-label="BSA UofL home">bsauofl.github.io</a>
+        <div class="nav-links">
+          <a href="#students">Current Students</a>
+          <a href="#alumni">Alumni</a>
+          <a href="#about">About</a>
+        </div>
+      </nav>
+
+      <section id="top" class="hero-content">
+        <p class="eyebrow">Bangladeshi Student Association at UofL</p>
+        <h1>Alumni & Current Student Profiles</h1>
+        <p class="hero-copy">
+          A living directory for the BSA UofL community featuring members' photos,
+          emails, LinkedIn profiles, biographies, academic interests, and career paths.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#students">Meet current students</a>
+          <a class="button secondary" href="#alumni">Explore alumni</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="stats" aria-label="Directory statistics">
+        <article>
+          <strong id="student-count">0</strong>
+          <span>Current Students</span>
+        </article>
+        <article>
+          <strong id="alumni-count">0</strong>
+          <span>Alumni</span>
+        </article>
+        <article>
+          <strong>UofL</strong>
+          <span>Community</span>
+        </article>
+      </section>
+
+      <section class="directory-controls" aria-label="Directory search and filters">
+        <div>
+          <p class="eyebrow">Directory</p>
+          <h2>Find members by name, role, interest, or bio</h2>
+        </div>
+        <label class="search-label" for="profile-search">
+          <span>Search profiles</span>
+          <input id="profile-search" type="search" placeholder="Search people, fields, companies..." />
+        </label>
+      </section>
+
+      <section id="students" class="profile-section">
+        <div class="section-heading">
+          <p class="eyebrow">Current Students</p>
+          <h2>Students shaping the BSA UofL community today</h2>
+        </div>
+        <div class="profile-grid" id="student-profiles"></div>
+      </section>
+
+      <section id="alumni" class="profile-section alternate">
+        <div class="section-heading">
+          <p class="eyebrow">Alumni</p>
+          <h2>Graduates carrying the Cardinal spirit forward</h2>
+        </div>
+        <div class="profile-grid" id="alumni-profiles"></div>
+      </section>
+
+      <section id="about" class="about-card">
+        <p class="eyebrow">About this site</p>
+        <h2>Built for easy updates</h2>
+        <p>
+          Add or edit people in <code>data/profiles.js</code>. Each profile supports a picture,
+          email, LinkedIn URL, short title, tags, and biography so the directory can grow with
+          the organization.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> BSA UofL. Built for bsauofl.github.io.</p>
+    </footer>
+
+    <script src="data/profiles.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
