@@ -139,18 +139,10 @@ h3 {
 
 main {
   max-width: 1180px;
-  margin: -76px auto 0;
-  padding: 0 24px 72px;
+  margin: 0 auto;
+  padding: 72px 24px;
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-bottom: 80px;
-}
-
-.stats article,
 .directory-controls,
 .about-card,
 .profile-card {
@@ -159,19 +151,6 @@ main {
   box-shadow: var(--shadow);
 }
 
-.stats article {
-  border-radius: 26px;
-  padding: 28px;
-}
-
-.stats strong {
-  display: block;
-  color: var(--red);
-  font-size: 2.3rem;
-  line-height: 1;
-}
-
-.stats span,
 .profile-title,
 .profile-card p,
 .about-card p {
@@ -312,7 +291,6 @@ footer {
 
 @media (max-width: 900px) {
   .directory-controls,
-  .stats,
   .profile-grid {
     grid-template-columns: 1fr;
   }
@@ -331,9 +309,5 @@ footer {
   .nav-links {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  main {
-    margin-top: -42px;
   }
 }

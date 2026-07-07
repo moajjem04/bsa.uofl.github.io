@@ -1,8 +1,6 @@
 const studentContainer = document.querySelector("#student-profiles");
 const alumniContainer = document.querySelector("#alumni-profiles");
 const searchInput = document.querySelector("#profile-search");
-const studentCount = document.querySelector("#student-count");
-const alumniCount = document.querySelector("#alumni-count");
 const year = document.querySelector("#year");
 
 year.textContent = new Date().getFullYear();
@@ -50,9 +48,6 @@ function renderProfiles(query = "") {
 
   studentContainer.innerHTML = students.map(createProfileCard).join("") || emptyState("current students");
   alumniContainer.innerHTML = alumni.map(createProfileCard).join("") || emptyState("alumni");
-
-  studentCount.textContent = profiles.filter((profile) => profile.status === "current").length;
-  alumniCount.textContent = profiles.filter((profile) => profile.status === "alumni").length;
 }
 
 function emptyState(groupName) {
